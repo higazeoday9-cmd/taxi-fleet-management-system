@@ -7,29 +7,29 @@ A role-based desktop ERP application engineered in Java for urban taxi fleet sch
 ## 📌 Features
 
 - **Role-Based Access Control (RBAC):**
-  - **Main Manager (Admin):** Global fleet oversight, manager onboarding, station allocations, KPI tracking, and bulk batch imports/exports[cite: 17].
-  - **Branch Manager:** Operational depot console to monitor local fleet availability, create trip bookings, and swap assigned vehicles[cite: 17].
-  - **Subscriber:** Customer self-service portal to inspect trip history and update contact records[cite: 17].
+  - **Main Manager (Admin):** Global fleet oversight, manager onboarding, station allocations, KPI tracking, and bulk batch imports/exports.
+  - **Branch Manager:** Operational depot console to monitor local fleet availability, create trip bookings, and swap assigned vehicles.
+  - **Subscriber:** Customer self-service portal to inspect trip history and update contact records.
 
 - **Polymorphic Fleet Modeling:**
-  - Standard Taxis, Express Taxis (with surcharge and city-zone limits), and Intercity Taxis (custom routes, multi-city travel limits, and overtime rates)[cite: 2, 4, 17].
+  - Standard Taxis, Express Taxis (with surcharge and city-zone limits), and Intercity Taxis (custom routes, multi-city travel limits, and overtime rates).
 
 - **Operations & Dispatch Engine:**
-  - Validates driver ownership, vehicle availability, and subscriber existence before dispatching[cite: 9, 17].
-  - Hot-swap capability for reassigning replacement vehicles to active bookings[cite: 9, 17].
+  - Validates driver ownership, vehicle availability, and subscriber existence before dispatching.
+  - Hot-swap capability for reassigning replacement vehicles to active bookings.
 
 - **State Management & Persistence:**
-  - Centralized thread-safe Singleton pattern (`systemDataBase`) for in-memory session caching[cite: 15, 17].
-  - Robust file I/O pipelines leveraging Java NIO to ingest and serialize data rosters (`members.txt`, `Taxi.txt`, `orders.txt`, `SystemManagers.txt`)[cite: 7, 17].
+  - Centralized thread-safe Singleton pattern (`systemDataBase`) for in-memory session caching.
+  - Robust file I/O pipelines leveraging Java NIO to ingest and serialize data rosters (`members.txt`, `Taxi.txt`, `orders.txt`, `SystemManagers.txt`).
 
 ---
 
 ## 🛠️ Tech Stack & Architecture
 
 - **Language:** Java (JDK 17+)
-- **GUI Framework:** Java Swing (`JFrame`, `JTabbedPane`, `JSplitPane`, `JTable`, `GridBagLayout`)[cite: 7, 9, 10, 13]
-- **Design Patterns:** Singleton Pattern, Factory/Helper Forms, Model-View-Controller (MVC) Separation[cite: 3, 15, 17]
-- **Persistence:** Java NIO File I/O[cite: 7, 17]
+- **GUI Framework:** Java Swing (`JFrame`, `JTabbedPane`, `JSplitPane`, `JTable`, `GridBagLayout`)
+- **Design Patterns:** Singleton Pattern, Factory/Helper Forms, Model-View-Controller (MVC) Separation
+- **Persistence:** Java NIO File I/O
 
 ---
 
@@ -37,18 +37,18 @@ A role-based desktop ERP application engineered in Java for urban taxi fleet sch
 
 ```text
 src/
-├── ExpressTaxi.java          # Subclass for express city-route services[cite: 2]
-├── Forms.java                # Modal dialog builder for entities and allocations[cite: 3]
-├── IntercityTaxi.java        # Subclass for long-distance multi-city journeys[cite: 4]
+├── ExpressTaxi.java          # Subclass for express city-route services
+├── Forms.java                # Modal dialog builder for entities and allocations
+├── IntercityTaxi.java        # Subclass for long-distance multi-city journeys
 ├── Main.java                 # CLI runner and data seeder
-├── MainManager.java          # Administrator model[cite: 6]
-├── MainManagerUI.java        # Executive dashboard with tabbed navigation & KPIs[cite: 7]
-├── Manager.java              # Branch manager domain entity[cite: 8]
-├── ManagerUI.java            # Split-pane operations console for branch managers[cite: 9]
-├── myForm.java               # Authentication gateway for all three user roles[cite: 10]
-├── Order.java                # Transactional dispatch ticket[cite: 11]
-├── Station.java              # Station entity managing localized fleet pools[cite: 12]
-├── SubscriberUI.java         # Customer self-service dashboard[cite: 13]
-├── Subscription.java         # Customer entity and profile data[cite: 14]
-├── systemDataBase.java       # Singleton in-memory data store[cite: 15]
-└── Taxi.java                 # Base vehicle class[cite: 16]
+├── MainManager.java          # Administrator model
+├── MainManagerUI.java        # Executive dashboard with tabbed navigation & KPIs
+├── Manager.java              # Branch manager domain entity
+├── ManagerUI.java            # Split-pane operations console for branch managers
+├── myForm.java               # Authentication gateway for all three user roles
+├── Order.java                # Transactional dispatch ticket
+├── Station.java              # Station entity managing localized fleet pools
+├── SubscriberUI.java         # Customer self-service dashboard
+├── Subscription.java         # Customer entity and profile data
+├── systemDataBase.java       # Singleton in-memory data store
+└── Taxi.java                 # Base vehicle class
