@@ -1,0 +1,2 @@
+T1 | Taxi | Available: true | Rate: 35.0
+T2 | ExpressTaxi | Available: true | Rate: 45.0

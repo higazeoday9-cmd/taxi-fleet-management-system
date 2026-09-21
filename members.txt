@@ -1,0 +1,12 @@
+S2 Monica Geller 0501111112 West Village
+S1 Rachel Green 0501111111 Soho
+S1001 Ali Nasser Haifa 0501234567
+S1002 Rami Cohen TelAviv 0529876543
+S1003 Dana Levy Jerusalem 0534567890
+S1004 Lina Barakat Nazareth 0541122334
+S1005 Adam Khalil Acre 0509988776
+S1006 Mira Haddad Ramallah 0512233445
+S1007 Noor Taha Jaffa 0523344556
+S1008 Fadi Azar Bethlehem 0537788991
+S1009 Yara Hassan Tulkarm 0506677889
+S1010 Sami Said Qalqilya 0515566778
